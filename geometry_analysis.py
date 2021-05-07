@@ -21,4 +21,5 @@ for num1 in range (0,num_atoms):
        y_distance = coordinates[num1,1]-coordinates[num2,1]
        z_distance = coordinates[num1,2]-coordinates[num2,2]
        bond_length_12 = numpy.sqrt(x_distance**2+y_distance**2+z_distance**2)
-       print(F'{symbols[num1]} to {symbols[num2]}:{bond_length_12:.3f}')
+       if bond_length_12 > 0 and bond_length_12 <= 1.5:
+       	   print(F'{symbols[num1]} to {symbols[num2]}:{bond_length_12:.3f}')
